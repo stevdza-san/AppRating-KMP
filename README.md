@@ -10,7 +10,7 @@ A <b>Kotlin Multiplatform</b> library, used to display a customizable App Rating
 
 ## Features
 
-- Kotlin Multiplatform Support: Works seamlessly on both Android and iOS.
+- Kotlin Multiplatform Support: Works seamlessly on both `Android` and `iOS`.
 - Customizable Intervals: Show the app rating dialog monthly, quarterly, semi-annually, or yearly.
 - Initial Delay: Configure an initial delay period (minimum 5 days) before showing the dialog.
 - User Acknowledgement: If the user cancels the dialog, it will reset the interval. If the user clicks a button to leave a review, the dialog will not show again.
@@ -18,14 +18,14 @@ A <b>Kotlin Multiplatform</b> library, used to display a customizable App Rating
 - Lightweight and Easy to Integrate: Minimal setup and configuration required.
 
 ## Installation
-Add the library dependency to your commonMain source set:
+Add the library dependency to your `commonMain` source set:
 
 ```gradle
 implementation("com.stevdza-san:app-rating:1.0.0")
 ```
 
 ## Usage
-Integrate the AppRatingDialog at the top level of your UI hierarchy, such as alongside your NavHost in a Jetpack Compose application.
+Integrate the `AppRatingDialog` at the top level of your UI hierarchy, such as alongside your `NavHost` in a Jetpack Compose application.
 
 ### Basic
 ```kotlin
