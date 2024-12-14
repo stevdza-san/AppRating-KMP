@@ -55,7 +55,7 @@ fun SetupNavGraph() {
 AppRatingDialog(
     playStoreLink = "https://play.google.com/store/apps/details?id=PACKAGE_NAME",
     appStoreLink = "https://apps.apple.com/app/YOUR_APP/ID",
-    initialDelayInDays = 7, // Initial delay before the dialog appears
+    initialDelayInDays = 7, // The initial period when the first dialog should show
     interval = Interval.Quarterly, // Interval for showing the dialog
     title = { Text(text = "Enjoying our App?") },
     content = { Text(text = "If you're happy with the app, please leave us a review!") },
