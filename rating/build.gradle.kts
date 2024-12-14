@@ -81,7 +81,7 @@ android {
 
 mavenPublishing {
     coordinates(
-        groupId = "com.stevdza_san",
+        groupId = "com.stevdza-san",
         artifactId = "app-rating",
         version = "1.0.0"
     )
