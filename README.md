@@ -8,6 +8,12 @@
 A <b>Kotlin Multiplatform</b> library, used to display a customizable App Rating dialog, prompting users to leave a review on the Play Store (Android) or App Store (iOS). The library supports configurable intervals for showing the dialog, ensuring a non-intrusive yet effective way to gather app reviews.
 </p><br>
 
+<p align="center">
+<img src="ASSETS/dialog_light.png" width=300 />
+  &nbsp;
+<img src="ASSETS/dialog_dark.png" width=300 />
+</p>
+
 ## Features
 
 - Kotlin Multiplatform Support: Works seamlessly on both `Android` and `iOS`.
