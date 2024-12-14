@@ -12,8 +12,8 @@ A <b>Kotlin Multiplatform</b> library, used to display a customizable App Rating
 
 - Kotlin Multiplatform Support: Works seamlessly on both `Android` and `iOS`.
 - Customizable Intervals: Show the app rating dialog monthly, quarterly, semi-annually, or yearly.
-- Initial Delay: Configure an initial delay period (minimum 5 days) before showing the dialog.
-- User Acknowledgement: If the user cancels the dialog, it will reset the interval. If the user clicks a button to leave a review, the dialog will not show again.
+- Initial Delay: Configure an initial delay period `(minimum 5 days)` before showing the dialog.
+- User Acknowledgement: If the user cancels the dialog, it will `reset` the interval. If the user clicks a button to leave a review, the dialog will `not` show again.
 - Customizable UI: Fully customizable text, colors, and styles for the dialog.
 - Lightweight and Easy to Integrate: Minimal setup and configuration required.
 
