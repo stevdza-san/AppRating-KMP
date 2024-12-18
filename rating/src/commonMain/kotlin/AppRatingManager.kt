@@ -14,6 +14,7 @@ import openWebBrowser
 internal class AppRatingManager(
     private val playStoreLink: String,
     private val appStoreLink: String,
+    private val desktopStoreLink: String,
 ) {
     private val timestampKey = "_appRatingManagerTimestamp"
     private val initialPeriodStateKey = "_appRatingManagerInitialPeriodState"
@@ -146,8 +147,11 @@ internal class AppRatingManager(
 
     internal fun openBrowser() {
         openWebBrowser(
-            url = if (getPlatform() == Platform.ANDROID) playStoreLink
-            else appStoreLink
+            url = when (getPlatform()) {
+                Platform.ANDROID -> playStoreLink
+                Platform.IOS -> appStoreLink
+                Platform.DESKTOP -> desktopStoreLink
+            }
         )
     }
 }
