@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://central.sonatype.com/artifact/com.stevdza-san/app-rating"><img alt="Profile" src="https://badgen.net/badge/Maven Central/v1.0.0/blue?icon=github"/></a>
+  <a href="https://central.sonatype.com/artifact/com.stevdza-san/app-rating"><img alt="Profile" src="https://badgen.net/badge/Maven Central/v1.0.1/blue?icon=github"/></a>
 </p>
 
 # <p align="center">⭐ AppRating-KMP </p>
@@ -27,7 +27,7 @@ A <b>Kotlin Multiplatform</b> library, used to display a customizable App Rating
 Add the library dependency to your `commonMain` source set:
 
 ```gradle
-implementation("com.stevdza-san:app-rating:1.0.0")
+implementation("com.stevdza-san:app-rating:1.0.1")
 ```
 
 ## Usage
