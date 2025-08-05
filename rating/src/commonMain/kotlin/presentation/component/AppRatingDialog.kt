@@ -82,6 +82,7 @@ fun AppRatingDialog(
     modifier: Modifier = Modifier,
     playStoreLink: String,
     appStoreLink: String,
+    desktopStoreLink: String,
     initialDelayInDays: Int = 5,
     interval: Interval = Interval.Monthly,
     title: @Composable (() -> Unit)? = { Text(text = "Enjoying our App?") },
@@ -97,7 +98,8 @@ fun AppRatingDialog(
     val appRatingManager = remember {
         AppRatingManager(
             playStoreLink,
-            appStoreLink
+            appStoreLink,
+            desktopStoreLink,
         )
     }
     val showDialog by appRatingManager.showDialog.collectAsState()
