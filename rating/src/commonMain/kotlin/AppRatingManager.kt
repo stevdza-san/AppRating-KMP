@@ -7,9 +7,10 @@ import com.stevdza_san.demo.util.Platform
 import com.stevdza_san.demo.util.getPlatform
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
-import kotlinx.datetime.Clock
-import kotlinx.datetime.Instant
+import kotlin.time.Clock
 import openWebBrowser
+import kotlin.time.ExperimentalTime
+import kotlin.time.Instant
 
 internal class AppRatingManager(
     private val playStoreLink: String,
@@ -61,6 +62,7 @@ internal class AppRatingManager(
         }
     }
 
+    @OptIn(ExperimentalTime::class)
     private fun shouldShowReviewDialog() {
         if (_mInitialPeriodState.value == InitialPeriodState.Waiting) {
             if (initialPeriodPassed()) {
@@ -95,12 +97,14 @@ internal class AppRatingManager(
         }
     }
 
+    @OptIn(ExperimentalTime::class)
     private fun initialPeriodPassed(): Boolean {
         val lastSavedTime = Instant.fromEpochMilliseconds(_mTimestamp.value)
         val timeDifference = Clock.System.now() - lastSavedTime
         return timeDifference.inWholeDays >= _mInitialDelayInDays.value
     }
 
+    @OptIn(ExperimentalTime::class)
     private fun saveTimestamp() {
         settings.putLong(
             key = timestampKey,

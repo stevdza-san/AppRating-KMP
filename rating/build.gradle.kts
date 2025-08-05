@@ -1,4 +1,3 @@
-import com.vanniktech.maven.publish.SonatypeHost
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
@@ -12,7 +11,7 @@ plugins {
 }
 
 group = "com.stevdza_san"
-version = "1.0.0"
+version = "1.0.1"
 
 kotlin {
     androidTarget {
@@ -83,7 +82,7 @@ mavenPublishing {
     coordinates(
         groupId = "com.stevdza-san",
         artifactId = "app-rating",
-        version = "1.0.0"
+        version = "1.0.1"
     )
 
     // Configure POM metadata for the published artifact
@@ -116,7 +115,7 @@ mavenPublishing {
     }
 
     // Configure publishing to Maven Central
-    publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
+    publishToMavenCentral()
 
     // Enable GPG signing for all publications
     signAllPublications()
