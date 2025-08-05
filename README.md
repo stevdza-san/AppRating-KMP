@@ -36,23 +36,15 @@ Integrate the `AppRatingDialog` at the top level of your UI hierarchy, such as a
 ### Basic
 ```kotlin
 @Composable
-fun SetupNavGraph() {
-    val navController = rememberNavController()
+fun MainScreen() {
 
-    // Top-level AppRatingDialog
     AppRatingDialog(
         playStoreLink = "https://play.google.com/store/apps/details?id=PACKAGE_NAME",
         appStoreLink = "https://apps.apple.com/app/YOUR_APP/ID",
         interval = Interval.Monthly
     )
 
-    NavHost(
-        navController = navController,
-        startDestination = Screen.Home
-    ) {
-        composable<Screen.Home> { HomeScreen() }
-        composable<Screen.Settings> { SettingsScreen() }
-    }
+    ..
 }
 ```
 
