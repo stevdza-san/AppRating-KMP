@@ -11,7 +11,7 @@ plugins {
 }
 
 group = "com.stevdza_san"
-version = "1.0.1"
+version = "1.0.2"
 
 kotlin {
     androidTarget {
@@ -58,15 +58,15 @@ kotlin {
 }
 
 android {
-    namespace = "com.stevdza_san"
+    namespace = "com.stevdza_san.apprating"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
     defaultConfig {
         minSdk = libs.versions.android.minSdk.get().toInt()
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 }
 
@@ -82,7 +82,7 @@ mavenPublishing {
     coordinates(
         groupId = "com.stevdza-san",
         artifactId = "app-rating",
-        version = "1.0.1"
+        version = "1.0.2"
     )
 
     // Configure POM metadata for the published artifact
