@@ -3,6 +3,7 @@ package com.stevdza_san.demo.presentation.component
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.LocalTextStyle
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -13,6 +14,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
@@ -71,8 +73,10 @@ import com.stevdza_san.demo.util.getPlatform
  * @param containerColor The background color of the dialog's container.
  * @param tonalElevation The elevation of the dialog to apply tonal shading..
  * @param dismissText The text for the dismiss button.
+ * @param dismissTextStyle The style for the dismiss text.
  * @param dismissButtonColors The colors to use for the dismiss button.
  * @param confirmText The text for the confirm button.
+ * @param confirmTextStyle The style for the confirm text.
  * @param confirmButtonColors The colors to use for the confirm button.
  * @param onDismiss Callback triggered when the dismiss button is clicked.
  *
@@ -89,8 +93,10 @@ fun AppRatingDialog(
     containerColor: Color = MaterialTheme.colorScheme.surface,
     tonalElevation: Dp = 1.dp,
     dismissText: String = "Cancel",
+    dismissTextStyle: TextStyle = LocalTextStyle.current,
     dismissButtonColors: ButtonColors = ButtonDefaults.textButtonColors(),
     confirmText: String = "Leave a review",
+    confirmTextStyle: TextStyle = LocalTextStyle.current,
     confirmButtonColors: ButtonColors = ButtonDefaults.textButtonColors(),
     onDismiss: (() -> Unit)? = null
 ) {
@@ -128,7 +134,8 @@ fun AppRatingDialog(
                 ) {
                     Text(
                         text = dismissText,
-                        color = MaterialTheme.colorScheme.outline
+                        color = MaterialTheme.colorScheme.outline,
+                        style = dismissTextStyle
                     )
                 }
             },
@@ -141,7 +148,10 @@ fun AppRatingDialog(
                     },
                     colors = confirmButtonColors
                 ) {
-                    Text(text = confirmText)
+                    Text(
+                        text = confirmText,
+                        style = confirmTextStyle
+                    )
                 }
             }
         )
